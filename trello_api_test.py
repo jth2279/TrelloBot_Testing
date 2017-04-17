@@ -24,7 +24,7 @@ Usage:
     - Put board as closed
     - Post new organization
     - Put new name for organization
-    - Delete 
+    - Delete organization
 """
 
 from trello import *
@@ -258,7 +258,17 @@ else:
     print ("[ ] Test unsucessful")
 print ("##############################################################\n")
 print ("##############################################################")
-print ("Getting organization testOrg ID...")
+print ("Change organization name...")
+r = requests.put(BASE_URL + "/organizations/" + orgID + "/displayName?key=" + TRELLO_APP_KEY + "&token=" + TRELLO_TOKEN_KEY + "&value=newOrg")
+numTest = numTest + 1
+if r.status_code == 200:
+    print ("[x] Test sucessful")
+    sucTest = sucTest + 1
+else:
+    print ("[ ] Test unsucessful")
+print ("##############################################################\n")
+print ("##############################################################")
+print ("Delete organization testOrg...")
 r = requests.delete(BASE_URL + "/organizations/" + orgID + "?key=" + TRELLO_APP_KEY + "&token=" + TRELLO_TOKEN_KEY)
 numTest = numTest + 1
 if r.status_code == 200:
