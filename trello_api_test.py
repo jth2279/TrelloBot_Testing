@@ -1,3 +1,32 @@
+"""
+Author: Jordan Holland
+Date: 4/17/2017
+Description: Testing for the trellobot to interact with the Trello API using RESTful commands
+Usage:
+    - Get user ID
+    - Get notifications for member
+    - Post a new board
+    - Get ID of board
+    - Post list to board
+    - Get ID of list
+    - Post card to the list
+    - Get ID of the card
+    - Post checklist to card
+    - Get ID of checklist
+    - Post item to checklist
+    - Post member to the card
+    - Put new name on card
+    - Post label to board
+    - Post label to card
+    - Get ID of item on checklist
+    - Put item on checklist as finished
+    - Get actions of board
+    - Put board as closed
+    - Post new organization
+    - Put new name for organization
+    - Delete 
+"""
+
 from trello import *
 from flask import jsonify
 import json, requests
